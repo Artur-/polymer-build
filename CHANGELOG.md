@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 <!-- Add new, unreleased changes here. -->
+* Write the bundle manifest if `"bundleManfest": "filename"` is defined in project configuration
 
 ## [2.1.0] - 2017-10-02
 * Updated `polymer-bundler` to 3.1.0, which inlines external stylesheet links in templates.

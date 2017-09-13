@@ -14,6 +14,7 @@
 
 import File = require('vinyl');
 import * as parse5 from 'parse5';
+import * as fs from 'fs';
 import {Bundler, Options, BundleManifest, generateShellMergeStrategy} from 'polymer-bundler';
 import {ProjectConfig} from 'polymer-project-config';
 
@@ -101,6 +102,12 @@ export class BuildBundler extends AsyncTransformStream<File, File> {
 
     const {documents, manifest} =
         await this._bundler.bundle(await this._generateBundleManifest());
+
+    if (this.config.bundleManifest) {
+      const fd = fs.openSync("build/"+this.config.bundleManifest, 'w');
+      fs.writeSync(fd, JSON.stringify(manifest.toJson()));
+      fs.closeSync(fd);
+    }
 
     // Remove the bundled files from the file map so they are not emitted later.
     this._unmapBundledFiles(manifest);
