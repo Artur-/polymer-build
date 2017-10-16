@@ -33,9 +33,9 @@
     "mz": "^2.6.0",
     "parse5": "^2.2.3",
     "plylog": "^0.5.0",
-    "polymer-analyzer": "^2.0.2",
-    "polymer-bundler": "^3.1.0",
-    "polymer-project-config": "^3.2.1",
+    "polymer-analyzer": "git+https://github.com/Artur-/polymer-analyzer.git#bundle-manifest",
+    "polymer-bundler": "git+https://github.com/Artur-/polymer-bundler.git#bundle-manifest",
+    "polymer-project-config": "git+https://github.com/Artur-/polymer-project-config.git#bundle-manifest",
     "sw-precache": "^5.1.1",
     "vinyl": "^1.2.0",
     "vinyl-fs": "^2.4.4"
